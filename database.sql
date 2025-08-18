@@ -1,3 +1,4 @@
+create database escola_siga;
 create table alunos (
     id int primary key auto_increment,
     aluno varchar(200) not null,
@@ -11,8 +12,8 @@ create table materias (
 );
 create table notas(
     id int primary key auto_increment,
-    id_materia int,
-    id_aluno int,
-    constraint fk_notas_alunos foreing key (id_aluno) references alunos (id),
-    constraint fk_notas_materias foreing key (id_materias) references meterias(id)
+    id_materias int,
+    id_alunos int,
+    constraint fk_notas_alunos foreign key (id_alunos) references alunos(id),
+    constraint fk_notas_materias foreign key (id_materias) references materias(id)
 );
