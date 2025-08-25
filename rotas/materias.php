@@ -15,7 +15,7 @@ switch($metodoSolicitado){
         $dados_recebidos = json_decode(file_get_contents("php://input"), true);
         break;
     case "GET":
-        echo "{ 'Veio do navegador' } ";
+        echo "{ 'Veio do navegador': true } ";
         break;
 }
 
